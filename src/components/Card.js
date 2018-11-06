@@ -7,6 +7,8 @@ const Post = styled.li`
   position: relative;
   border: 1px solid ${props => props.theme.colors.secondary};
   border-radius: 2px;
+  box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+
   margin: 0 0 1em 0;
   width: 100%;
   transition: background 0.2s;
@@ -18,8 +20,11 @@ const Post = styled.li`
     flex: ${props => (props.featured ? '0 0 100%' : '0 0 32%')};
   }
   &:hover {
-    background: ${props => props.theme.colors.tertiary};
+    box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+    transition: all .4s ease;
+    transform: translate3D(0,-1px,0) scale(1.02);
   }
+  transition: all .5s ease;
   a {
     display: flex;
     flex-flow: column;
