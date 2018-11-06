@@ -21,8 +21,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
   }
 
@@ -83,13 +81,8 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background: white;
-    line-height: 1;
-    font-size: 100%;
-    font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    font-weight: 400;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   img {
@@ -100,9 +93,6 @@ const GlobalStyle = createGlobalStyle`
 
   button,
   input {
-    font-family: inherit;
-    font-size: inherit;
-    background: none;
     border: none;
     outline: none;
     appearance: none;
