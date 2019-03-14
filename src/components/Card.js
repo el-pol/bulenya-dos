@@ -56,6 +56,7 @@ const Date = styled.h3`
 
 const Excerpt = styled.p`
   margin: 0 1rem 1rem 1rem;
+  margin-bottom: 1rem !important;
   line-height: 1.6;
 `
 
