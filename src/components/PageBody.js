@@ -58,9 +58,6 @@ const Body = styled.div`
       list-style: disc;
       list-style-position: inside;
       line-height: 1.25;
-      &:last-child {
-        margin: 0;
-      }
     }
   }
 
@@ -69,9 +66,6 @@ const Body = styled.div`
       list-style: decimal;
       list-style-position: inside;
       line-height: 1.25;
-      &:last-child {
-        margin: 0;
-      }
     }
   }
 
