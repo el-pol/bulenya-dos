@@ -7,7 +7,7 @@ const Post = styled.li`
   position: relative;
   border: 1px solid ${props => props.theme.colors.secondary};
   border-radius: 2px;
-  box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+  box-shadow: rgba(46, 41, 51, 0.08) 0px 1px 2px, rgba(71, 63, 79, 0.08) 0px 2px 4px;
 
   margin: 0 0 1em 0;
   width: 100%;
@@ -20,7 +20,7 @@ const Post = styled.li`
     flex: ${props => (props.featured ? '0 0 100%' : '0 0 32%')};
   }
   &:hover {
-    box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+    box-shadow: rgba(46, 41, 51, 0.08) 0px 4px 8px, rgba(71, 63, 79, 0.16) 0px 8px 16px;
     transition: all .4s ease;
     transform: translate3D(0,-1px,0) scale(1.02);
   }
@@ -55,7 +55,7 @@ const Date = styled.h3`
 `
 
 const Excerpt = styled.p`
-  margin: 0 1rem 1rem 1rem;
+  margin: 1rem;
   line-height: 1.6;
 `
 
