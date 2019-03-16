@@ -20,8 +20,11 @@ const Box = styled.div`
     border-radius: 2px;
     text-decoration: none;
     transition: 0.2s;
+    border: 4px solid white;
     &:hover {
-      background: ${props => props.theme.colors.highlight};
+      background: white;
+      color: ${props => props.theme.colors.base};
+      border: 4px solid black;
     }
   }
 `

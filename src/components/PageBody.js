@@ -32,10 +32,6 @@ const Body = styled.div`
 
   a {
     transition: 0.2s;
-    color: ${props => props.theme.colors.base};
-    &:hover {
-      color: ${props => props.theme.colors.highlight};
-    }
   }
 
   del {
@@ -56,7 +52,6 @@ const Body = styled.div`
   ul {
     li {
       list-style: disc;
-      list-style-position: inside;
       line-height: 1.25;
     }
   }
@@ -64,7 +59,6 @@ const Body = styled.div`
   ol {
     li {
       list-style: decimal;
-      list-style-position: inside;
       line-height: 1.25;
     }
   }
