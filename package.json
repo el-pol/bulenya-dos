@@ -1,7 +1,7 @@
 {
   "name": "bulenya-dos",
   "description": "Pol's personal blog",
-  "version": "1.0",
+  "version": "1.0.0",
   "repository": "https://github.com/Polcius/bulenya-dos",
   "author": "Pol Milian <polcius@gmail.com>",
   "dependencies": {
