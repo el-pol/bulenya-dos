@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import config from '../utils/siteConfig'
+import siteConfig from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Container from '../components/Container'
@@ -10,6 +10,7 @@ import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDate from '../components/PostDate'
 import SEO from '../components/SEO'
+import Share from '../components/Share'
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
@@ -28,7 +29,7 @@ const PostTemplate = ({ data, pageContext }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{`${title} - ${config.siteTitle}`}</title>
+        <title>{`${title} - ${siteConfig.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
 
@@ -38,6 +39,15 @@ const PostTemplate = ({ data, pageContext }) => {
         {tags && <TagList tags={tags} />}
         <PostDate date={publishDate} />
         <PageBody body={body} />
+        <Share
+				socialConfig={{
+					twitterHandle : `${siteConfig.userTwitter}`,
+					config: {
+						url: `${siteConfig.siteUrl}/${slug}`,
+						title,
+					},
+				}}
+			/>
       </Container>
       <PostLinks previous={previous} next={next} />
     </Layout>
