@@ -25,7 +25,6 @@ const PostTemplate = ({ data, pageContext }) => {
 
   const previous = pageContext.prev
   const next = pageContext.next
-
   return (
     <Layout>
       <Helmet>
@@ -37,7 +36,8 @@ const PostTemplate = ({ data, pageContext }) => {
 
       <Container>
         {tags && <TagList tags={tags} />}
-        <PostDate date={publishDate} />
+        <PostDate date={publishDate} readingtime={body.childMarkdownRemark.timeToRead} />
+        
         <PageBody body={body} />
         <Share
 				socialConfig={{
@@ -84,8 +84,9 @@ export const query = graphql`
       }
       body {
         childMarkdownRemark {
+          timeToRead
           html
-          excerpt(pruneLength: 320)
+          excerpt(pruneLength: 200)
         }
       }
     }

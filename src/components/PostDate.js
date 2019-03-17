@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import formatReadingTime from '../utils/formatReadingTime'
 
 const Wrapper = styled.div`
   margin: 0 auto 2em;
@@ -18,6 +19,7 @@ const PostDate = props => {
     <Wrapper>
       <Date>
         <span>Published:</span> {props.date}
+        <span>{` • ${formatReadingTime(props.readingtime)}`}</span>
       </Date>
     </Wrapper>
   )
