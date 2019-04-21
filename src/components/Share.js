@@ -17,6 +17,9 @@ const ShareButtonsWrapper = styled.section`
   width: 60%;
   margin: 5rem auto;
   justify-content: space-evenly;
+  h5 {
+    color: grey;
+  }
   div {
     margin: 0 0.1rem;
     &:hover {
@@ -33,28 +36,34 @@ const ShareButtonsWrapper = styled.section`
 const Share = ({socialConfig}) => (
   <ShareButtonsWrapper>
     <FacebookShareButton alt="" url={socialConfig.config.url} quote={socialConfig.config.title}>
-      Share on Facebook
+      <h5>Share on Facebook</h5>
       <FacebookIcon
         size={64}
         round 
       />
     </FacebookShareButton>
     <LinkedinShareButton url={socialConfig.config.url} title={socialConfig.config.title}>
-    Share on LinkedIn
+    <h5>
+      Share on LinkedIn
+    </h5>
     <LinkedinIcon
         size={64}
         round 
       />
     </LinkedinShareButton>
     <TwitterShareButton url={socialConfig.config.url} title={socialConfig.config.title} via={socialConfig.twitterHandle}>
-    Share on Twitter
+    <h5>
+      Share on Twitter
+    </h5>
       <TwitterIcon
         size={64}
         round 
       />
     </TwitterShareButton>
     <WhatsappShareButton url={socialConfig.config.url} title={socialConfig.config.title}>
-    Share on Whatsapp
+    <h5>
+      Share on Whatsapp
+    </h5>
     <WhatsappIcon
         size={64}
         round 
