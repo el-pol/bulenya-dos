@@ -36,34 +36,24 @@ const ShareButtonsWrapper = styled.section`
 const Share = ({socialConfig}) => (
   <ShareButtonsWrapper>
     <FacebookShareButton alt="" url={socialConfig.config.url} quote={socialConfig.config.title}>
-      <h5>Share on Facebook</h5>
       <FacebookIcon
         size={64}
         round 
       />
     </FacebookShareButton>
     <LinkedinShareButton url={socialConfig.config.url} title={socialConfig.config.title}>
-    <h5>
-      Share on LinkedIn
-    </h5>
     <LinkedinIcon
         size={64}
         round 
       />
     </LinkedinShareButton>
     <TwitterShareButton url={socialConfig.config.url} title={socialConfig.config.title} via={socialConfig.twitterHandle}>
-    <h5>
-      Share on Twitter
-    </h5>
       <TwitterIcon
         size={64}
         round 
       />
     </TwitterShareButton>
     <WhatsappShareButton url={socialConfig.config.url} title={socialConfig.config.title}>
-    <h5>
-      Share on Whatsapp
-    </h5>
     <WhatsappIcon
         size={64}
         round 
