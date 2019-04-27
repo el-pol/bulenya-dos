@@ -32,6 +32,7 @@ const Body = styled.div`
 
   a {
     transition: 0.2s;
+    color: ${props => props.theme.bodyLink}
   }
 
   del {
@@ -94,3 +95,4 @@ const PageBody = props => {
 }
 
 export default PageBody
+
