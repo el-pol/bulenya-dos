@@ -92,7 +92,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${props => props.theme.bodyLink}
+    color: #2457ec;
   }
 
   button,
