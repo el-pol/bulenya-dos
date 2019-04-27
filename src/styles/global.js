@@ -91,6 +91,10 @@ const GlobalStyle = createGlobalStyle`
   	height: auto;
   }
 
+  a {
+    color: ${props => props.theme.bodyLink}
+  }
+
   button,
   input {
     border: none;
