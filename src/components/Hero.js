@@ -14,8 +14,9 @@ const BgImg = styled(Img)`
   z-index: -1;
   min-height: 300px;
   height: auto;
+  filter: blur(2px);
   @media (min-width: ${props => props.theme.responsive.small}) {
-    height: ${props => props.height || 'auto'};
+    height: ${props => props.height || '20rem'};
   }
   & > img {
     object-fit: ${props => props.fit || 'cover'} !important;
@@ -48,6 +49,7 @@ const Title = styled.h1`
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
+  text-shadow: 1px 3px 8px black;
 `
 
 const Hero = props => (
