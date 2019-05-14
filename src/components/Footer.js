@@ -29,14 +29,15 @@ const Item = styled.li`
     width: auto;
   }
   a {
-    font-weight: 600;
+    font-weight: 400;
+    text-decoration: underline;
     transition: all 0.2s;
-    color: ${props => props.theme.colors.base};
+    color: ${props => props.theme.colors.tertirary};
     &:hover {
       color: ${props => props.theme.colors.highlight};
     }
     &:visited {
-      color: ${props => props.theme.colors.base};
+      color: ${props => props.theme.colors.tertiary};
     }
   }
 `
