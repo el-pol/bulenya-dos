@@ -13,8 +13,8 @@ const Wrapper = styled.footer`
 const List = styled.ul`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   border-top: 1px solid ${props => props.theme.colors.secondary};
   padding: 1em 0 2em;
@@ -23,6 +23,7 @@ const List = styled.ul`
 
 const Item = styled.li`
   display: inline-block;
+  font-size: 14px;
   padding: 0.25em 0;
   width: 100%;
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
@@ -46,21 +47,7 @@ const Footer = () => (
   <Wrapper>
     <List>
       <Item>
-        <a
-          href="https://github.com/Polcius/bulenya-dos"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          bulenya-dos
-        </a>{' '}
-        inspired by{' '}
-        <a
-          href="https://github.com/ryanwiemer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        @ryanwiemer
-        </a>
+        written by <a href="/about">Pol Milian</a> ©2019 
       </Item>
     </List>
   </Wrapper>
