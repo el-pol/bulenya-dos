@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import formatReadingTime from '../utils/formatReadingTime'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Post = styled.li`
   position: relative;
@@ -68,7 +69,7 @@ const Excerpt = styled.p`
 const Card = ({ slug, heroImage, title, publishDate, body, body: {childMarkdownRemark: {timeToRead}}, ...props }) => {
   return (
     <Post featured={props.featured}>
-      <Link to={`/${slug}/`}>
+      <AniLink fade to={`/${slug}/`}>
         <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
         <Title>{title}</Title>
         <Date>{publishDate}</Date>
@@ -78,7 +79,7 @@ const Card = ({ slug, heroImage, title, publishDate, body, body: {childMarkdownR
             __html: body.childMarkdownRemark.excerpt,
           }}
         />
-      </Link>
+      </AniLink>
     </Post>
   )
 }
