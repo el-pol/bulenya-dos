@@ -69,7 +69,7 @@ const Excerpt = styled.p`
 const Card = ({ slug, heroImage, title, publishDate, body, body: {childMarkdownRemark: {timeToRead}}, ...props }) => {
   return (
     <Post featured={props.featured}>
-      <AniLink fade to={`/${slug}/`}>
+      <AniLink cover bg="black" to={`/${slug}/`}>
         <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
         <Title>{title}</Title>
         <Date>{publishDate}</Date>
