@@ -3,7 +3,7 @@ const path = require(`path`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  // TODO: add the title of each post to the context so we can access next/prev and retrieve the title
+
   const loadPosts = new Promise((resolve, reject) => {
     graphql(`
       {
