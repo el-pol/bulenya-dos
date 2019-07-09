@@ -33,7 +33,7 @@ const Item = styled.li`
     font-weight: 400;
     text-decoration: underline;
     transition: all 0.2s;
-    color: ${props => props.theme.colors.secondary};
+    color: grey;
     &:hover {
       color: ${props => props.theme.colors.highlight};
     }
