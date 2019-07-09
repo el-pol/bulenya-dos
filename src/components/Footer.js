@@ -33,12 +33,12 @@ const Item = styled.li`
     font-weight: 400;
     text-decoration: underline;
     transition: all 0.2s;
-    color: ${props => props.theme.colors.tertirary};
+    color: ${props => props.theme.colors.secondary};
     &:hover {
       color: ${props => props.theme.colors.highlight};
     }
     &:visited {
-      color: ${props => props.theme.colors.tertiary};
+      color: ${props => props.theme.colors.secondary};
     }
   }
 `
