@@ -39,6 +39,10 @@ const NextLink = styled(Link)`
 const PageIndicator = styled.span`
   color: gray;
   position: absolute;
+  @media screen and (max-width: ${props => props.theme.responsive.small}) {
+    left: 40%;
+    width: auto;
+  }
   left: 0;
   right: 0;
   width: 100%;
