@@ -51,7 +51,7 @@ const Title = styled.h3`
 `
 
 const Date = styled.h4`
-  margin: 0 1rem 1.5rem 1rem;
+  margin: 0px 1rem 0.5rem;
   color: gray;
 `
 const ReadingTime = styled.h5`
