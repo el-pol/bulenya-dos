@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import siteConfig from '../utils/siteConfig'
@@ -11,6 +11,7 @@ import PostLinks from '../components/PostLinks'
 import PostDate from '../components/PostDate'
 import SEO from '../components/SEO'
 import Share from '../components/Share'
+import Cockroach from '../components/Cockroach'
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
@@ -22,7 +23,6 @@ const PostTemplate = ({ data, pageContext }) => {
     tags,
   } = data.contentfulPost
   const postNode = data.contentfulPost
-
   const previous = pageContext.prev
   const next = pageContext.next
   return (
@@ -37,7 +37,7 @@ const PostTemplate = ({ data, pageContext }) => {
       <Container>
         {tags && <TagList tags={tags} />}
         <PostDate date={publishDate} readingtime={body.childMarkdownRemark.timeToRead} />
-        
+        { slug === 'turning-31-in-melbourne-made-it' ? <Cockroach /> : null }
         <PageBody body={body} />
         <Share
 				socialConfig={{
