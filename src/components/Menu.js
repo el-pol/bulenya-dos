@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import gsap from 'gsap'
 
 const Header = styled.header`
   background: ${props => props.theme.colors.base};
@@ -16,6 +17,9 @@ const Nav = styled.nav`
   ul {
     display: flex;
     justify-content: space-between;
+    li {
+      opacity: 0;
+    }
   }
 
   li {
@@ -44,16 +48,28 @@ const activeLinkStyle = {
 }
 
 const Menu = () => {
+  let tl = gsap.timeline()
+  const playAnimation = () => {
+    tl.to('.listitem', {
+      duration: 2.5,
+      ease: "slow(0.7, 0.7, false)",
+      opacity: 1,
+      stagger: 1.25
+    })
+  }
+  useEffect(() => {
+    playAnimation()
+  }, []);
   return (
     <Header>
       <Nav>
         <ul>
-          <li>
+          <li className="listitem">
             <Link to="/" activeStyle={activeLinkStyle}>
               Home
             </Link>
           </li>
-          <li>
+          <li className="listitem">
             <Link to="/about/" activeStyle={activeLinkStyle}>
               About
             </Link>

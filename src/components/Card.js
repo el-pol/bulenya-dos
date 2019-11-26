@@ -49,7 +49,6 @@ const Title = styled.h3`
   text-transform: capitalize;
   margin: 1rem 1rem 0.5rem 1rem;
 `
-
 const Date = styled.h4`
   margin: 0px 1rem 0.5rem;
   color: gray;
