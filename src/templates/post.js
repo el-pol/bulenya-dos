@@ -10,7 +10,6 @@ import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDate from '../components/PostDate'
 import SEO from '../components/SEO'
-import Share from '../components/Share'
 import Cockroach from '../components/Cockroach'
 
 const PostTemplate = ({ data, pageContext }) => {
@@ -39,15 +38,6 @@ const PostTemplate = ({ data, pageContext }) => {
         <PostDate date={publishDate} readingtime={body.childMarkdownRemark.timeToRead} />
         { slug === 'turning-31-in-melbourne-made-it' ? <Cockroach /> : null }
         <PageBody body={body} />
-        <Share
-				socialConfig={{
-					twitterHandle : `${siteConfig.userTwitter}`,
-					config: {
-						url: `${siteConfig.siteUrl}/${slug}`,
-						title,
-					},
-				}}
-			/>
       </Container>
       <PostLinks previous={previous} next={next} />
     </Layout>
