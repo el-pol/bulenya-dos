@@ -45,10 +45,6 @@ const Body = styled.div`
     font-style: italic;
   }
 
-  ul,
-  ol {
-    margin: 0 0 2em 0;
-  }
 
   ul {
     li {
