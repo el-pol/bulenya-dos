@@ -38,6 +38,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     
     'gatsby-plugin-react-helmet',
     {
@@ -161,12 +167,6 @@ module.exports = {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: config.themeColor,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
       },
     },
     'gatsby-plugin-netlify',

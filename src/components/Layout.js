@@ -10,6 +10,7 @@ import Footer from '../components/Footer'
 
 const Template = ({ children }) => {
   return (
+    <>
     <div className="siteRoot">
       <Helmet>
         <title>{config.siteTitle}</title>
@@ -17,8 +18,8 @@ const Template = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={favicon} />
       </Helmet>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+      {/* <GlobalStyle /> */}
         <>
           <div className="siteContent">
             <Menu />
@@ -29,6 +30,7 @@ const Template = ({ children }) => {
       </ThemeProvider>
       
     </div>
+    </>
   )
 }
 

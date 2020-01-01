@@ -40,7 +40,7 @@
     "react-typography": "^0.16.19",
     "styled-components": "^4.4.1",
     "typography": "^0.16.19",
-    "typography-theme-sutro": "^0.15.10"
+    "typography-theme-kirkham": "^0.16.19"
   },
   "keywords": [
     "gatsby"
