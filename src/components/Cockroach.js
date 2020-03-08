@@ -25,15 +25,22 @@ gsap.registerPlugin(MotionPathPlugin);
 const Cockroach = props => {
   const playAnimation = () => {
     gsap.to(".cockroach", {
-      duration: 15,
+      duration: 5,
       motionPath: { path: "#motion-guide", align: "#motion-guide", autoRotate: true },
       repeat: -1,
       ease: "none"
     });
   }
+
+  const handleScroll = () => {
+    let middle = document.body.scrollHeight / 2;
+    let test = (window.innerHeight + window.pageYOffset) >= middle
+    test && playAnimation()
+  }
   useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
     gsap.set(".cockroach", { xPercent: -50, yPercent: -50, width: 400 });
-    playAnimation()
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
   return(
