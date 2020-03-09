@@ -18,7 +18,7 @@ const Water = styled.div`
   background-size: cover;
   top:0;
   left:0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   filter: url("#turbulence");
 `

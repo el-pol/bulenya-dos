@@ -47,7 +47,7 @@ const Footer = () => (
   <Wrapper>
     <List>
       <Item>
-        written by <a href="/about">Pol Milian</a> ©2019 
+        written by <a href="/about">Pol Milian</a> {new Date().getFullYear()}
       </Item>
     </List>
   </Wrapper>
