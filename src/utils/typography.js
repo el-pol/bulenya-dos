@@ -1,6 +1,6 @@
 import Typography from "typography"
-import kirkhamTheme from "typography-theme-kirkham"
+import stowLakeTheme   from "typography-theme-stow-lake"
 
-const typography = new Typography(kirkhamTheme)
+const typography = new Typography(stowLakeTheme)
 
 export default typography

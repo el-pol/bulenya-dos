@@ -10,7 +10,6 @@ import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDate from '../components/PostDate'
 import SEO from '../components/SEO'
-import Cockroach from '../components/Cockroach'
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
@@ -36,7 +35,6 @@ const PostTemplate = ({ data, pageContext }) => {
       <Container>
         {tags && <TagList tags={tags} />}
         <PostDate date={publishDate} readingtime={body.childMarkdownRemark.timeToRead} />
-        { slug === 'turning-31-in-melbourne-made-it' ? <Cockroach /> : null }
         <PageBody body={body} />
       </Container>
       <PostLinks previous={previous} next={next} />

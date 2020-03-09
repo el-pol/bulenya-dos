@@ -38,12 +38,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
     
     'gatsby-plugin-react-helmet',
     {
@@ -69,9 +63,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options:
-        process.env.NODE_ENV === 'development'
-          ? contentfulConfig.development
-          : contentfulConfig.production,
+      process.env.NODE_ENV === 'development'
+      ? contentfulConfig.development
+      : contentfulConfig.production,
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -105,7 +99,7 @@ module.exports = {
           return ret
         },
         query: `
-    {
+        {
       site {
         siteMetadata {
           rssMetadata {
@@ -120,7 +114,7 @@ module.exports = {
         }
       }
     }
-  `,
+    `,
         feeds: [
           {
             serialize(ctx) {
@@ -129,7 +123,7 @@ module.exports = {
                 date: edge.node.publishDate,
                 title: edge.node.title,
                 description: edge.node.body.childMarkdownRemark.excerpt,
-
+                
                 url: rssMetadata.site_url + '/' + edge.node.slug,
                 guid: rssMetadata.site_url + '/' + edge.node.slug,
                 custom_elements: [
@@ -140,25 +134,26 @@ module.exports = {
               }))
             },
             query: `
-              {
+            {
             allContentfulPost(limit: 1000, sort: {fields: [publishDate], order: DESC}) {
-               edges {
-                 node {
-                   title
-                   slug
-                   publishDate(formatString: "MMMM DD, YYYY")
-                   body {
-                     childMarkdownRemark {
-                       html
-                       excerpt(pruneLength: 80)
-                     }
-                   }
-                 }
-               }
-             }
-           }
-      `,
+              edges {
+                node {
+                  title
+                  slug
+                  publishDate(formatString: "MMMM DD, YYYY")
+                  body {
+                    childMarkdownRemark {
+                      html
+                      excerpt(pruneLength: 80)
+                    }
+                  }
+                }
+              }
+            }
+          }
+          `,
             output: '/rss.xml',
+            title: 'Bulenya Blog RSS Feed'
           },
         ],
       },
@@ -167,6 +162,12 @@ module.exports = {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: config.themeColor,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
       },
     },
     'gatsby-plugin-netlify',
