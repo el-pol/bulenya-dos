@@ -17,17 +17,12 @@ const Nav = styled.nav`
   ul {
     display: flex;
     justify-content: space-between;
+    margin: 0;
     li {
       opacity: 0;
-    }
-  }
-
-  li {
-    display: inline-block;
-    &:first-child {
-      position: relative;
+      display: flex;
+      align-items: center;
       margin: 0;
-      flex-basis: 100%;
     }
   }
 
