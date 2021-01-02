@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-const About = styleł.section`
+const About = styled.section`
   text-align: center;
 `
 
