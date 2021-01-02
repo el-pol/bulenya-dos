@@ -19,7 +19,7 @@ const PageTemplate = ({ data }) => {
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} pageSEO />
-      {slug === 'about' ? <SeaBg /> : (<Container>
+      {slug === 'about' ? (<Container><SeaBg /></Container>) : (<Container>
         <PageTitle>{title}</PageTitle>
         <PageBody body={body} />
       </Container>)
