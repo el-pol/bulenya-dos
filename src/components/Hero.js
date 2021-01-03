@@ -41,6 +41,7 @@ const Title = styled.h1`
   text-transform: capitalize;
   font-weight: 600;
   position: absolute;
+  height: 25vh;
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
   padding: 0 1rem;
